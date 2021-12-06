@@ -30,4 +30,8 @@ class MainActivity : AppCompatActivity() {
         gantiFragment(supportFragmentManager, ResepFragment.newInstance(), R.id.contentFrame)
     }
 
+    fun showAboutMeFragment() {
+        gantiFragment(supportFragmentManager, AboutMeFragment.newInstance(), R.id.contentFrame)
+    }
+
 }
