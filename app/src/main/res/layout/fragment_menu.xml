@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/btnAnekaMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/txtAnekaMenu"
+        android:layout_centerHorizontal="true"
+        android:background="#973737"
+        android:padding="25dp"
+        android:src="@drawable/ic_baseline_fastfood_24"
+        android:bottomRightRadius="30dp"
+        android:bottomLeftRadius="10dp"
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp"/>
+
+    <TextView
+        android:id="@+id/txtAnekaMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/txtCenter"
+        android:layout_centerHorizontal="true"
+        android:text="Resep Masakan"
+        android:textColor="#973737"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/txtCenter"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <ImageButton
+        android:id="@+id/btnAboutMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCenter"
+        android:layout_centerHorizontal="true"
+        android:background="#973737"
+        android:padding="25dp"
+        android:src="@drawable/ic_baseline_people_alt_24" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAboutMe"
+        android:layout_centerHorizontal="true"
+        android:text="About Me"
+        android:textColor="#973737"
+        android:textStyle="bold" />
+
+</RelativeLayout>
