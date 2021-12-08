@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 /**
  * A simple [Fragment] subclass.
@@ -18,7 +20,13 @@ class ResepFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_resep, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_resep, container, false)
+        val fabAddResep = rootView.findViewById<FloatingActionButton>(R.id.fabAddResep) // Use the current view
+        fabAddResep.setOnClickListener() {
+            (activity as MainActivity).showAddResepFragment()
+        }
+
+        return  rootView;
     }
 
     companion object {
