@@ -2,6 +2,7 @@ package com.example.aplikasiresepmakanan
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 
@@ -36,6 +37,10 @@ class MainActivity : AppCompatActivity() {
 
     fun showAddResepFragment() {
         gantiFragment(supportFragmentManager, AddResepFragment.newInstance(), R.id.contentFrame)
+    }
+
+    fun tampilToast(message: String) {
+        Toast.makeText(this, "message", Toast.LENGTH_SHORT).show()
     }
 
 }
