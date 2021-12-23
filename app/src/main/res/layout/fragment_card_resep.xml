@@ -1,61 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="16dp"
+    android:clickable="true"
+    card_view:cardCornerRadius="10dp">
 
-    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_view"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        card_view:cardCornerRadius="10dp"
-        android:clickable="true">
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/makan2" />
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgCard"
+            android:padding="15dp">
 
-            <ImageView
-                android:id="@+id/imgCard"
+            <TextView
+                android:id="@+id/txtCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:src="@drawable/makan2" />
+                android:text="Soto Betawi"
+                android:textColor="#3b3b3b"
+                android:textSize="8pt"
+                android:textStyle="bold" />
 
-            <RelativeLayout
+            <ImageButton
+                android:id="@+id/btnDeleteCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/imgCard"
-                android:padding="15dp">
-
-                <TextView
-                    android:id="@+id/txtCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Soto Betawi"
-                    android:textColor="#3b3b3b"
-                    android:textSize="8pt"
-                    android:textStyle="bold" />
-
-                <ImageButton
-                    android:id="@+id/btnDeleteCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:background="#FFF"
-                    android:src="@drawable/ic_baseline_delete_24"
-                    android:tag="25"/>
-
-            </RelativeLayout>
+                android:layout_alignParentRight="true"
+                android:background="#FFF"
+                android:src="@drawable/ic_baseline_delete_24"
+                android:tag="25" />
 
         </RelativeLayout>
 
-    </androidx.cardview.widget.CardView>
+    </RelativeLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="#000000"/>
-
-</LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,10 +1,7 @@
 package com.example.aplikasiresepmakanan
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface ResepDao {
@@ -12,6 +9,8 @@ interface ResepDao {
     fun addResep(resep: Resep)
 
     @Query("SELECT * FROM Resep")
-    fun getAllResep(): LiveData<List<Resep>>
+    fun getAllResep(): LiveData<MutableList<Resep>>
 
+    @Delete
+    fun deleteAddress(address: Resep)
 }
