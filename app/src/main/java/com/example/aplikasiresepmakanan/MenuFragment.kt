@@ -27,6 +27,11 @@ class MenuFragment : Fragment() {
         btnAboutMe.setOnClickListener() {
             (activity as MainActivity).showAboutMeFragment()
         }
+
+        val btnAboutApp = rootView.findViewById<ImageButton>(R.id.btnAboutApp) // Use the current view
+        btnAboutApp.setOnClickListener() {
+            (activity as MainActivity).showAboutAppFragment()
+        }
         return rootView
     }
 
